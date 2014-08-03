@@ -5,11 +5,11 @@ using Microsoft.CodeAnalysis;
 
 namespace HttpClientGenerator
 {
-    public class ActionFinder : SymbolVisitor<IEnumerable<IMethodSymbol>>
+    public class AttributedMethodFinder : SymbolVisitor<IEnumerable<IMethodSymbol>>
     {
         private readonly INamedTypeSymbol _routeAttirbute;
 
-        public ActionFinder(INamedTypeSymbol routeAttirbute)
+        public AttributedMethodFinder(INamedTypeSymbol routeAttirbute)
         {
             _routeAttirbute = routeAttirbute;
         }

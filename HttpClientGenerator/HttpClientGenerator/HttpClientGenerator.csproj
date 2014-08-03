@@ -79,7 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionFinder.cs" />
+    <Compile Include="AttributedMethodFinder.cs" />
     <Compile Include="ClientEmittor.cs" />
     <Compile Include="ClientInfo.cs" />
     <Compile Include="EndpointCollector.cs" />

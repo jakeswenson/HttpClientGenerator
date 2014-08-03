@@ -52,7 +52,7 @@ namespace HttpClientGenerator
 
             INamedTypeSymbol[] controllerTypes = typeFinder.FindTypes(serviceCompilation.Assembly);
 
-            var attributedMethodFinder = new ActionFinder(routeAttributeTypeSymbol);
+            var attributedMethodFinder = new AttributedMethodFinder(routeAttributeTypeSymbol);
 
             var actionMethods = attributedMethodFinder.FindMethodsInTypes(controllerTypes);
 
