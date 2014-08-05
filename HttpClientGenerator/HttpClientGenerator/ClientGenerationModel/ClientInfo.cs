@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HttpClientGenerator
+namespace HttpClientGenerator.ClientGenerationModel
 {
     internal class ClientInfo
     {

@@ -2,9 +2,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace HttpClientGenerator
+namespace HttpClientGenerator.SemanticAnalysis
 {
+    public class ReturnStatementGenericTypes : CSharpSyntaxWalker
+    {
+        public ReturnStatementGenericTypes()
+        {
+            ReturnCalls = new List<InvocationExpressionSyntax>();
+        }
+
+        public override void VisitInvocationExpression(InvocationExpressionSyntax node)
+        {
+            if (node.Parent.CSharpKind() == SyntaxKind.ReturnStatement)
+            {
+                ReturnCalls.Add(node);
+            }
+        }
+
+        public List<InvocationExpressionSyntax> ReturnCalls { get; set; }
+    }
+
     public class SubTypeFinder : SymbolVisitor<IEnumerable<INamedTypeSymbol>>
     {
         private readonly INamedTypeSymbol _apiController;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 
-namespace HttpClientGenerator
+namespace HttpClientGenerator.SemanticAnalysis
 {
     public class AttributedMethodFinder : SymbolVisitor<IEnumerable<IMethodSymbol>>
     {

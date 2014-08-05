@@ -1,10 +1,11 @@
 using System.IO;
 using System.Linq;
 using System.Web.Http;
+using HttpClientGenerator.References;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace HttpClientGenerator
+namespace HttpClientGenerator.Projects
 {
     internal class ProjectCompilationFactory
     {
@@ -27,7 +28,12 @@ namespace HttpClientGenerator
                     _referenceCache.MSCoreLib,
                     _referenceCache.SystemRuntime,
                     _referenceCache.AssemblyReferenceForType<ApiController>(), 
-                    _referenceCache.ForAssemblyLocation(@"C:\pf\Stash\aco\Composite\Core\bin\Debug\PF.Aco.Entities.dll")
+                    _referenceCache.AssemblyReferenceForType<EnumerableQuery>(), 
+                    _referenceCache.ForAssemblyLocation(@"C:\pf\Stash\aco\Composite\Core\bin\Debug\PF.Aco.Entities.dll"),
+                    _referenceCache.ForAssemblyLocation(@"C:\pf\Stash\aco\Composite\Core\bin\Debug\PF.Aco.Common.dll"),
+                    _referenceCache.ForAssemblyLocation(@"C:\pf\Stash\aco\Composite\Core\bin\Debug\PF.North.Common.dll"),
+                    _referenceCache.ForAssemblyLocation(@"C:\pf\Stash\aco\Composite\Core\bin\Debug\PF.Common.dll"),
+                    _referenceCache.ForAssemblyLocation(@"C:\pf\Stash\aco\Composite\Core\bin\Debug\PF.Common.SqlClient.dll"),
                 };
         }
 

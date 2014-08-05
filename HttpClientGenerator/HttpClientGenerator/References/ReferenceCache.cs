@@ -4,7 +4,7 @@ using System.Collections.Immutable;
 using System.Runtime.InteropServices;
 using Microsoft.CodeAnalysis;
 
-namespace HttpClientGenerator
+namespace HttpClientGenerator.References
 {
     internal class ReferenceCache
     {

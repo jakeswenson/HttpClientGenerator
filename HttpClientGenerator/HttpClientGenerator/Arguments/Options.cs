@@ -1,6 +1,6 @@
 using PowerArgs;
 
-namespace HttpClientGenerator
+namespace HttpClientGenerator.Arguments
 {
     public class Options
     {

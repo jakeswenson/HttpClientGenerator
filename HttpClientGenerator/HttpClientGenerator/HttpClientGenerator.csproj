@@ -79,16 +79,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttributedMethodFinder.cs" />
-    <Compile Include="ClientEmittor.cs" />
-    <Compile Include="ClientInfo.cs" />
+    <Compile Include="Arguments\Options.cs" />
+    <Compile Include="ClientEmitter.cs" />
+    <Compile Include="ClientGenerationModel\ClientInfo.cs" />
+    <Compile Include="ClientGenerationModel\RestEndpointInfo.cs" />
     <Compile Include="EndpointCollector.cs" />
-    <Compile Include="ProjectCompilationFactory.cs" />
-    <Compile Include="ProjectCompilationFileResolver.cs" />
-    <Compile Include="ReferenceCache.cs" />
-    <Compile Include="RestEndpointInfo.cs" />
-    <Compile Include="SubTypeFinder.cs" />
-    <Compile Include="Options.cs" />
+    <Compile Include="Projects\ProjectCompilationFactory.cs" />
+    <Compile Include="Projects\ProjectCompilationFileResolver.cs" />
+    <Compile Include="References\ReferenceCache.cs" />
+    <Compile Include="SemanticAnalysis\AttributedMethodFinder.cs" />
+    <Compile Include="SemanticAnalysis\SubTypeFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
