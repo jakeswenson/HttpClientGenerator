@@ -49,6 +49,7 @@ namespace HttpClientGenerator
                     ty = nty.TypeArguments[0];
                 }
             }
+
             return new SimpleType
             {
                 Name = ty.Name,
